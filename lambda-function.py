@@ -3,18 +3,6 @@ import boto3
 from datetime import datetime
 
 def lambda_handler(event, context):
-    # Handle CORS preflight
-    if event.get('httpMethod') == 'OPTIONS':
-        return {
-            'statusCode': 200,
-            'headers': {
-                'Access-Control-Allow-Origin': '*',
-                'Access-Control-Allow-Headers': 'Content-Type',
-                'Access-Control-Allow-Methods': 'POST, OPTIONS'
-            },
-            'body': ''
-        }
-    
     try:
         body = json.loads(event['body'])
         name = body['name']
@@ -23,11 +11,6 @@ def lambda_handler(event, context):
     except:
         return {
             'statusCode': 400,
-            'headers': {
-                'Access-Control-Allow-Origin': '*',
-                'Access-Control-Allow-Headers': 'Content-Type',
-                'Access-Control-Allow-Methods': 'POST, OPTIONS'
-            },
             'body': json.dumps({'error': 'Invalid request'})
         }
     
@@ -45,20 +28,10 @@ def lambda_handler(event, context):
         
         return {
             'statusCode': 200,
-            'headers': {
-                'Access-Control-Allow-Origin': '*',
-                'Access-Control-Allow-Headers': 'Content-Type',
-                'Access-Control-Allow-Methods': 'POST, OPTIONS'
-            },
             'body': json.dumps({'message': 'Success'})
         }
     except Exception as e:
         return {
             'statusCode': 500,
-            'headers': {
-                'Access-Control-Allow-Origin': '*',
-                'Access-Control-Allow-Headers': 'Content-Type',
-                'Access-Control-Allow-Methods': 'POST, OPTIONS'
-            },
             'body': json.dumps({'error': str(e)})
         }
