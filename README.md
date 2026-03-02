@@ -9,6 +9,9 @@ My personal website built as part of the AWS Builder Challenge #2: Build a websi
 - HTML5 & CSS3
 - JavaScript
 - AWS Amplify (Hosting)
+- AWS Lambda (Serverless Functions)
+- AWS SES (Email Service)
+- AWS API Gateway
 - GitHub (Version Control)
 
 ## 📋 Challenge Progress
@@ -17,13 +20,14 @@ My personal website built as part of the AWS Builder Challenge #2: Build a websi
 - ✅ Day 3: Website Content Creation
 - ✅ Day 4: Global Distribution
 - ✅ Day 5: Professional Deployment
-- 🔄 Day 6: Secure Contact Form (In Progress)
+- ✅ Day 6: Secure Contact Form
 - ⏳ Day 7: Share Success
 
 ## 🎯 Challenge Requirements Met
 ✅ Personal "About Me" website hosted on AWS global network  
 ✅ Professional-grade HTTPS security (automatic with Amplify)  
-✅ Working contact form with JavaScript functionality  
+✅ Working contact form with AWS Lambda + SES integration  
+✅ Serverless email processing with input validation  
 ✅ All within AWS Free Tier limits  
 
 ## 🎨 Additional Features
