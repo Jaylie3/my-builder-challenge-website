@@ -374,6 +374,92 @@ footer {
     font-size: 14px;
 }
 
+/* PORTFOLIO SECTION */
+.portfolio {
+    background: white;
+    border-radius: 8px;
+    padding: 40px;
+    margin: 40px 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    position: relative;
+}
+
+.portfolio::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 40px;
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, #38bdf8 0%, #6366f1 100%);
+    border-radius: 6px;
+    opacity: 0.9;
+}
+
+.portfolio h3 {
+    color: #232f3e;
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    letter-spacing: -0.02em;
+    text-align: left;
+}
+
+.portfolio-intro {
+    font-size: 16px;
+    color: #687078;
+    margin-bottom: 32px;
+    line-height: 1.6;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+}
+
+.project-card {
+    background: #f8fafc;
+    border: 1px solid #e5e7eb;
+    padding: 24px;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+    position: relative;
+    box-shadow: 0 1px 4px rgba(120, 119, 198, 0.04);
+}
+
+.project-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(54, 162, 235, 0.08);
+}
+
+.project-card h4 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: #232f3e;
+}
+
+.project-card p {
+    color: #687078;
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 16px;
+}
+
+.project-card a {
+    color: #6366f1;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.project-card a:hover {
+    text-decoration: underline;
+    color: #38bdf8;
+}
+/* END PORTFOLIO SECTION */
+
 @media (max-width: 768px) {
     .hero h1 {
         font-size: 36px;
